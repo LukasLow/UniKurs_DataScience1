@@ -1,8 +1,13 @@
-def ASSIGNMENT(new_list, i, old_list, j):
-    new_list[i] = old_list[j]
+import matplotlib.pyplot as plt
+
+# def ASSIGNMENT(new_list, i, old_list, j):
+    # wird nicht benötigt
+    # Funktionen werden grundsätzlich klein geschrieben
+#     new_list[i] = old_list[j]
 
 
-def mergeSort(list_to_sort_by_merge):
+def merge_sort(list_to_sort_by_merge):
+    # aus mergeSort wird merge_sort
     if (
         len(list_to_sort_by_merge) > 1
         # and not len(list_to_sort_by_merge) < 1
@@ -12,8 +17,8 @@ def mergeSort(list_to_sort_by_merge):
         left = list_to_sort_by_merge[:mid]
         right = list_to_sort_by_merge[mid:]
 
-        mergeSort(left)
-        mergeSort(right)
+        merge_sort(left)
+        merge_sort(right)
 
         l = 0
         r = 0
@@ -42,14 +47,14 @@ def mergeSort(list_to_sort_by_merge):
             r += 1
             i += 1
 
-
-import matplotlib.pyplot as plt
-
+# Leerzeilen für bessere Übersichtlichkeit
 my_list = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+
 x = range(len(my_list))
 plt.plot(x, my_list)
 plt.show()
-mergeSort(my_list)
+
+merge_sort(my_list)
 
 x = range(len(my_list))
 plt.plot(x, my_list)
