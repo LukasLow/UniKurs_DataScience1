@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import pytest
 
-from merge_sort import mergeSort, ASSIGNMENT
+from mergesort import mergeSort, ASSIGNMENT
 
 
 def test_mergeSort():
