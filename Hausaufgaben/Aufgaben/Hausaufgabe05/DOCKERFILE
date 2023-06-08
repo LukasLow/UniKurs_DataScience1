@@ -1,0 +1,28 @@
+## Dockerfile
+
+# Start from a base Python 3.9 image
+FROM python:3.9
+
+# Set the working directory to /
+WORKDIR /app
+
+# Copy the requirements.txt file and install Python dependencies
+COPY requirements.txt requirements.txt
+RUN pip install numpy pandas matplotlib seaborn
+RUN pip install -r requirements.txt
+
+# Copy the rest of the project
+COPY . .
+
+# Set the host and port using environment variables
+ENV PORT=8080
+
+# Expose the port
+EXPOSE $PORT
+
+#DEBUG
+RUN pwd
+RUN find / -name "*" | grep -vE "^/(var|usr|sbin|etc|sys|proc|lib|root)"
+ 
+# Run the application
+CMD ["python", "mergesort.py"]

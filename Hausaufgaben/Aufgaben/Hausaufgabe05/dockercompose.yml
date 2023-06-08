@@ -1,0 +1,15 @@
+version: "3"
+services:
+  run-tests:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: pytest
+
+  run-method:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    command: python main.py
