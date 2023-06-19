@@ -16,3 +16,4 @@
 
 
 1f) ist noch offen
+1g) muss entweder Herrmann oder Nayan machen 
