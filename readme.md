@@ -8,5 +8,3 @@
 |   4    | 100 |
 |   5    |  61,5 |
 |   6    |   |
-
-aaaaaaaaaaaaaaaaaaaa
